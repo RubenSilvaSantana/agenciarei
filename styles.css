@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo figcaption {
+    color: #d4af37;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero, .features, .how-it-works {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #121212;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero article, .features ul, .how-it-works p {
+    width: 50%;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #b89c30;
+}
+
+.whatsapp-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1e865f;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #d4af37;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+#backToTopBtn {
+    position: fixed;
+    right: 30px;
+    bottom: 80px;
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#backToTopBtn:hover {
+    background-color: #b89c30;
+}/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .header-content, main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero, .features, .how-it-works {
+        flex-direction: column;
+    }
+
+    .hero article, .features ul, .how-it-works p, .features aside, .how-it-works aside {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 100px; /* Reduz o tamanho do logo */
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .button, .whatsapp-button {
+        padding: 8px 16px; /* Ajusta o tamanho dos botões */
+    }
+
+    #backToTopBtn {
+        right: 10px;
+        bottom: 60px; /* Ajusta a posição do botão de voltar ao topo */
+    }
+}
